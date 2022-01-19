@@ -29,10 +29,6 @@
   margin: .5rem;
 }
 
-.header ul li a {
-  color: #f2f2f2;
-}
-
 .footer {
   display: -ms-grid;
   display: grid;
