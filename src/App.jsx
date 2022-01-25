@@ -1,24 +1,32 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 import Home from './components/Home'
-import About from './components/About'
+// import About from './components/About'
 import Header from './components/Header'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
-import Feature from './components/Feature'
+import Feature, {Product, Products, ProductName, Dashboard} from './components/Feature'
+// import { Product } from './components/Feature'
 
 
 export default function App() {
   return( 
   <>
+  <BrowserRouter >
   <Header></Header>
   <Routes>
     <Route index path="/" element={<Home />} />
-    <Route path="/feature" element={<Feature/>}/>
-    <Route path="/about" element={<About />}/>
+    <Route path="/feature" element={<Feature/>}>
+      <Route path="product" element={<Product/>} />
+      <Route path="products" element={<Products/>} />
+      <Route path=":productName" element={<ProductName/>} />
+      </Route>
     <Route path="/blog" element={<Blog/>} />
+    <Route path="/dashboard" element={<Dashboard />}/>
     <Route path="/contact" element={<Contact/>}/>
+    <Route path="/feature/hello" element={<Navigate replace to="/feature"/>}/>
   </Routes>
+  </BrowserRouter>
   </>
   )
 }
