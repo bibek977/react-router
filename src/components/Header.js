@@ -17,6 +17,7 @@ export default function Header() {
                 <li><NavLink style={data} to="/blog">Blog</NavLink></li>
                 {/* <li><NavLink style={data} to="/about">About Us</NavLink></li> */}
                 <li><NavLink style={data} to="/contact">Contact Us</NavLink></li>
+                <li><NavLink style={data} to="/search">Search</NavLink></li>
                 {/* <li><NavLink to="/feature/product">Product</NavLink></li> */}
                 
             </ul>
