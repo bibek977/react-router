@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Contact() {
+export default function Contact(props) {
     return (
         <div className='contact'>
-            <p>Contact</p>
+            <p>Contact {props.name}</p>
         </div>
     )
 }

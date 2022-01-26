@@ -57,6 +57,7 @@ const Dashboard= ()=>{
     return(
         <>
         <h1>The product is {location.state} </h1>
+        <h1>The product is {location.pathname} </h1>
         </>
     )
 }

@@ -7,6 +7,7 @@ import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Feature, {Product, Products, ProductName, Dashboard} from './components/Feature'
 // import { Product } from './components/Feature'
+import Error from './components/Error'
 
 
 export default function App() {
@@ -23,8 +24,10 @@ export default function App() {
       </Route>
     <Route path="/blog" element={<Blog/>} />
     <Route path="/dashboard" element={<Dashboard />}/>
-    <Route path="/contact" element={<Contact/>}/>
-    <Route path="/feature/hello" element={<Navigate replace to="/feature"/>}/>
+    <Route path="/contact" element={<Contact name="bibek"/>}/>
+    {/* <Route path="*" element={<Navigate replace to="/"/>}/> */}
+    <Route path="*" element={<Error/>}></Route>
+
   </Routes>
   </BrowserRouter>
   </>
