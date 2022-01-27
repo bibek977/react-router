@@ -10,6 +10,10 @@
 
 .header{
     background-color: black;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+    // align-items: center;
     ul{
         display: flex;
         justify-content: space-evenly;
@@ -36,3 +40,36 @@
 //     }
 // }
 
+.toggle{
+    display: none;
+    
+    button{
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 1rem;
+        border: .2rem solid rgb(0,200,0);
+        color: tomato;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width : 750px) {
+    .toggle{
+        display: block;
+        display: flex;
+        height: 5rem;
+        align-items: center;
+    }
+    .header ul{
+        display: none;
+    }
+    
+    .mobile ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    
+    }
+}

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './css/header.css'
 import { NavLink } from 'react-router-dom'
 
 
 export default function Header() {
+
+    const [show, setshow] = useState(false);
+
     const data = ({isActive})=>{
         return {
             color : isActive ? "white" : "tomato"
@@ -12,7 +15,7 @@ export default function Header() {
 
     return (
         
-        <div className='header' >
+        <div className={show ? "header mobile":'header'} >
             <ul>
                 <li><NavLink style={data} to="/">Home</NavLink></li>
                 <li><NavLink style={data} to="/feature">Features</NavLink></li>
@@ -24,6 +27,9 @@ export default function Header() {
                 {/* <li><NavLink to="/feature/product">Product</NavLink></li> */}
                 
             </ul>
+            <div className="toggle">
+                <button onClick={()=>setshow(!show)}>close</button>
+            </div>
         </div>
     )
 }
